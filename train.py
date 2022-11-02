@@ -190,7 +190,7 @@ def validate(args, model, criterion, valid_dataset, epoch):
             continue
         with torch.no_grad():
             # Compute loss
-            output, attn_scores = model(sample['src_tokens'], sample['src_lengths'], sample['tgt_inputs'])
+            output, attn_scores = model(sample['src_tokens'], sample['src_lengths'].to('cpu'), sample['tgt_inputs'])
             loss = criterion(output.view(-1, output.size(-1)), sample['tgt_tokens'].view(-1))
         # Update tracked statistics
         stats['valid_loss'] += loss.item()
