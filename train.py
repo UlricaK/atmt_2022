@@ -121,7 +121,7 @@ def main(args):
                 continue
             model.train()
 
-            output, _ = model(sample['src_tokens'], sample['src_lengths'], sample['tgt_inputs'])
+            output, _ = model(sample['src_tokens'], sample['src_lengths'].to('cpu'), sample['tgt_inputs'])
             loss = \
                 criterion(output.view(-1, output.size(-1)), sample['tgt_tokens'].view(-1)) / len(sample['src_lengths'])
 
