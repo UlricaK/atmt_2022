@@ -85,3 +85,11 @@ class Dictionary(object):
                 return self.save(f)
         for word, count in zip(self.words[self.num_special:], self.counts[self.num_special:]):
             print('{} {}'.format(word, count), file=file)
+
+    def merge(self,dic):
+        original_dic = self
+        for word in dic.word2idx:
+            idx = dic.word2idx[word]
+            count = dic.counts[idx]
+            new_dic = add_word(original_dic, word, n=count)
+        return new_dic
