@@ -12,38 +12,36 @@ from torch.utils.data.sampler import Sampler
 class Seq2SeqDataset(Dataset):
     def __init__(self, src_file, tgt_file, src_dict, tgt_dict):
         self.src_dict, self.src_dict = src_dict, tgt_dict
+
+        with open(src_file, 'rb') as f:
+            self.src_dataset = pickle.load(f)
+            self.src_sizes = np.array([len(tokens) for tokens in self.src_dataset])
+
+        with open(tgt_file, 'rb') as f:
+            self.tgt_dataset = pickle.load(f)
+            self.tgt_sizes = np.array([len(tokens) for tokens in self.tgt_dataset])
+
+    def autoencode(self):
+        tgt = self.tgt_dataset
+
+        self.src_dataset.extend(tgt)
+        self.src_sizes = np.array([len(tokens) for tokens in self.src_dataset])
+
+        self.tgt_dataset.extend(tgt)
+        self.tgt_sizes = np.array([len(tokens) for tokens in self.tgt_dataset])
+
+    def shuffle(self):
+        # shuffle data
+        src = self.src_dataset
+        tgt = self.tgt_dataset
         self.src_dataset = []
         self.tgt_dataset = []
-
-        src = []
-        with open(src_file, 'rb') as f:
-            src.extend(pickle.load(f))
-        with open(tgt_file, 'rb') as f:
-            src.extend(pickle.load(f))
-        self.src_sizes = np.array([len(tokens) for tokens in src])
-
-        tgt = []
-        with open(tgt_file, 'rb') as f:
-            tgt.extend(pickle.load(f))
-        with open(tgt_file, 'rb') as f:
-            tgt.extend(pickle.load(f))
-        self.tgt_sizes = np.array([len(tokens) for tokens in tgt])
-
-        # shuffle data
         indexes = [i for i in range(len(src))]
         random.shuffle(indexes)
-
         for index in indexes:
             self.src_dataset.append(src[index])
             self.tgt_dataset.append(tgt[index])
 
-        # with open(src_file, 'rb') as f:
-        #     self.src_dataset = pickle.load(f)
-        #     self.src_sizes = np.array([len(tokens) for tokens in self.src_dataset])
-        #
-        # with open(tgt_file, 'rb') as f:
-        #     self.tgt_dataset = pickle.load(f)
-        #     self.tgt_sizes = np.array([len(tokens) for tokens in self.tgt_dataset])
 
     def __getitem__(self, index):
         return {

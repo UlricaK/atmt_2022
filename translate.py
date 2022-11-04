@@ -43,8 +43,6 @@ def main(args):
     logging.info('Loaded a source dictionary ({:s}) with {:d} words'.format(args.source_lang, len(src_dict)))
     tgt_dict = Dictionary.load(os.path.join(args.dicts, 'dict.{:s}'.format(args.target_lang)))
     logging.info('Loaded a target dictionary ({:s}) with {:d} words'.format(args.target_lang, len(tgt_dict)))
-    merged_dict = src_dict.merge(tgt_dict)
-    logging.info('Gnerated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
 
     # Load dataset
     test_dataset = Seq2SeqDataset(
@@ -113,7 +111,7 @@ def main(args):
 
     # Write to file
     if args.output is not None:
-        with open(args.output, 'w') as out_file:
+        with open(args.output, 'w',encoding='utf-8') as out_file:
             for sent_id in range(len(all_hyps.keys())):
                 out_file.write(all_hyps[sent_id] + '\n')
 
