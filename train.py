@@ -68,7 +68,7 @@ def main(args):
     tgt_dict = Dictionary.load(os.path.join(args.data, 'dict.{:s}'.format(args.target_lang)))
     logging.info('Loaded a target dictionary ({:s}) with {:d} words'.format(args.target_lang, len(tgt_dict)))
     merged_dict = src_dict.merge(tgt_dict)
-    logging.info('Merged source and target dictionaries')
+    logging.info('Gnerated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
 
     # Load datasets
     def load_data(split):

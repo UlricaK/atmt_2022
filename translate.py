@@ -43,6 +43,8 @@ def main(args):
     logging.info('Loaded a source dictionary ({:s}) with {:d} words'.format(args.source_lang, len(src_dict)))
     tgt_dict = Dictionary.load(os.path.join(args.dicts, 'dict.{:s}'.format(args.target_lang)))
     logging.info('Loaded a target dictionary ({:s}) with {:d} words'.format(args.target_lang, len(tgt_dict)))
+    merged_dict = src_dict.merge(tgt_dict)
+    logging.info('Gnerated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
 
     # Load dataset
     test_dataset = Seq2SeqDataset(
