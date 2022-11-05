@@ -75,7 +75,7 @@ def main(args):
         dataset = Seq2SeqDataset(
             src_file=os.path.join(args.data, '{:s}.{:s}'.format(split, args.source_lang)),
             tgt_file=os.path.join(args.data, '{:s}.{:s}'.format(split, args.target_lang)),
-            src_dict=merged_dict, tgt_dict=merged_dict)
+            src_dict=merged_dict, tgt_dict=tgt_dict)
         dataset.autoencode()
         dataset.shuffle()
         return dataset
