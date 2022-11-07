@@ -1,3 +1,5 @@
+pip install subword-nmt
+
 # build bpe
 subword-nmt learn-joint-bpe-and-vocab --input data/en-fr/preprocessed/train.en -s 10000 --output assignments/03/bpe/en.bpe --write-vocabulary assignments/03/bpe/dict.en.txt
 
