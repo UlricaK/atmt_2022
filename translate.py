@@ -43,21 +43,21 @@ def main(args):
     logging.info('Loaded a source dictionary ({:s}) with {:d} words'.format(args.source_lang, len(src_dict)))
     tgt_dict = Dictionary.load(os.path.join(args.dicts, 'dict.{:s}'.format(args.target_lang)))
     logging.info('Loaded a target dictionary ({:s}) with {:d} words'.format(args.target_lang, len(tgt_dict)))
-    merged_dict = src_dict.merge(tgt_dict)
-    logging.info('Generated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
+    # merged_dict = src_dict.merge(tgt_dict)
+    # logging.info('Generated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
 
     # Load dataset
     test_dataset = Seq2SeqDataset(
         src_file=os.path.join(args.data, 'test.{:s}'.format(args.source_lang)),
         tgt_file=os.path.join(args.data, 'test.{:s}'.format(args.target_lang)),
-        src_dict=merged_dict, tgt_dict=tgt_dict)
+        src_dict=src_dict, tgt_dict=tgt_dict)
 
     test_loader = torch.utils.data.DataLoader(test_dataset, num_workers=1, collate_fn=test_dataset.collater,
                                               batch_sampler=BatchSampler(test_dataset, 9999999,
                                                                          args.batch_size, 1, 0, shuffle=False,
                                                                          seed=args.seed))
     # Build model and criterion
-    model = models.build_model(args, merged_dict, tgt_dict)
+    model = models.build_model(args, src_dict, tgt_dict)
     if args.cuda:
         model = model.cuda()
     model.eval()

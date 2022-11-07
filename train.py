@@ -67,15 +67,15 @@ def main(args):
     logging.info('Loaded a source dictionary ({:s}) with {:d} words'.format(args.source_lang, len(src_dict)))
     tgt_dict = Dictionary.load(os.path.join(args.data, 'dict.{:s}'.format(args.target_lang)))
     logging.info('Loaded a target dictionary ({:s}) with {:d} words'.format(args.target_lang, len(tgt_dict)))
-    merged_dict = src_dict.merge(tgt_dict)
-    logging.info('Generated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
+    # merged_dict = src_dict.merge(tgt_dict)
+    # logging.info('Generated a merged dictionary from source and target with {:d} words.'.format(len(merged_dict)))
 
     # Load datasets
     def load_data(split):
         dataset = Seq2SeqDataset(
             src_file=os.path.join(args.data, '{:s}.{:s}'.format(split, args.source_lang)),
             tgt_file=os.path.join(args.data, '{:s}.{:s}'.format(split, args.target_lang)),
-            src_dict=merged_dict, tgt_dict=tgt_dict)
+            src_dict=src_dict, tgt_dict=tgt_dict)
         dataset.autoencode()
         dataset.shuffle()
         return dataset
