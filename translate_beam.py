@@ -32,6 +32,7 @@ def get_args():
     parser.add_argument('--beam-size', default=5, type=int, help='number of hypotheses expanded in beam search')
     # alpha hyperparameter for length normalization (described as lp in https://arxiv.org/pdf/1609.08144.pdf equation 14)
     parser.add_argument('--alpha', default=0.0, type=float, help='alpha for softer length normalization')
+    parser.add_argument('--N', default=3, type=int, help='number of translations generated for each sentence')
 
     return parser.parse_args()
 
@@ -195,34 +196,41 @@ def main(args):
                 search.prune()
 
         # Segment into sentences
-        best_sents = torch.stack([search.get_best()[1].sequence[1:].cpu() for search in searches])
-        decoded_batch = best_sents.numpy()
-        #import pdb;pdb.set_trace()
+        bests = [search.get_best(args.N) for search in searches]
+        for i in range(args.N):
+            best_sents = torch.stack([best[i][1].sequence[1:].cpu() for best in bests])
+            decoded_batch = best_sents.numpy()
+            #import pdb;pdb.set_trace()
 
-        output_sentences = [decoded_batch[row, :] for row in range(decoded_batch.shape[0])]
+            output_sentences = [decoded_batch[row, :] for row in range(decoded_batch.shape[0])]
 
-        # __QUESTION 6: What is the purpose of this for loop?
-        temp = list()
-        for sent in output_sentences:
-            first_eos = np.where(sent == tgt_dict.eos_idx)[0]
-            if len(first_eos) > 0:
-                temp.append(sent[:first_eos[0]])
-            else:
-                temp.append(sent)
-        output_sentences = temp
+            # __QUESTION 6: What is the purpose of this for loop?
+            temp = list()
+            for sent in output_sentences:
+                first_eos = np.where(sent == tgt_dict.eos_idx)[0]
+                if len(first_eos) > 0:
+                    temp.append(sent[:first_eos[0]])
+                else:
+                    temp.append(sent)
+            output_sentences = temp
 
-        # Convert arrays of indices into strings of words
-        output_sentences = [tgt_dict.string(sent) for sent in output_sentences]
+            # Convert arrays of indices into strings of words
+            output_sentences = [tgt_dict.string(sent) for sent in output_sentences]
 
-        for ii, sent in enumerate(output_sentences):
-            all_hyps[int(sample['id'].data[ii])] = sent
+            for ii, sent in enumerate(output_sentences):
+                key = int(sample['id'].data[ii])
+                if all_hyps.__contains__(key):
+                    all_hyps[int(sample['id'].data[ii])].append(sent)
+                else:
+                    all_hyps[int(sample['id'].data[ii])] = [sent]
 
 
     # Write to file
     if args.output is not None:
         with open(args.output, 'w') as out_file:
             for sent_id in range(len(all_hyps.keys())):
-                out_file.write(all_hyps[sent_id] + '\n')
+                for i in range(args.N):
+                    out_file.write(all_hyps[sent_id][i] + '\n')
 
 
 if __name__ == '__main__':
