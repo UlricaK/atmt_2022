@@ -1,0 +1,4 @@
+--beam-size 21 
+--alpha 0.5 
+--N 3 
+--batch-size 5
