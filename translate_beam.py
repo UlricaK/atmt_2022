@@ -10,9 +10,7 @@ from torch.serialization import default_restore_location
 from seq2seq import models, utils
 from seq2seq.data.dictionary import Dictionary
 from seq2seq.data.dataset import Seq2SeqDataset, BatchSampler
-import seq2seq.beam as beam
-import seq2seq.beam_uid as beam_uid
-
+from seq2seq.beam import BeamSearch, BeamSearchNode
 
 def get_args():
     """ Defines generation-specific hyper-parameters. """
@@ -29,9 +27,9 @@ def get_args():
     parser.add_argument('--max-len', default=100, type=int, help='maximum length of generated sequence')
 
     # Add beam search arguments
-    parser.add_argument('--square-regularize', default=False, help='Use a square regularizer')
     parser.add_argument('--beam-size', default=5, type=int, help='number of hypotheses expanded in beam search')
     # alpha hyperparameter for length normalization (described as lp in https://arxiv.org/pdf/1609.08144.pdf equation 14)
+    parser.add_argument('--lamda', default=0.0, type=float, help='parameter of the square regularizer')
     parser.add_argument('--alpha', default=0.0, type=float, help='alpha for softer length normalization')
     parser.add_argument('--gamma', default=0.0, type=float, help='diversity modifier')
     parser.add_argument('--N', default=1, type=int, help='number of translations generated for each sentence')
@@ -72,11 +70,6 @@ def main(args):
     model.load_state_dict(state_dict['model'])
     logging.info('Loaded a model from checkpoint {:s}'.format(args.checkpoint_path))
     progress_bar = tqdm(test_loader, desc='| Generation', leave=False)
-
-    if args.square_regularize:
-        BeamSearch, BeamSearchNode = beam_uid.BeamSearch,beam_uid.BeamSearchNode
-    else:
-        BeamSearch, BeamSearchNode = beam.BeamSearch, beam.BeamSearchNode
 
     # Iterate over the test set
     all_hyps = {}
@@ -128,7 +121,7 @@ def main(args):
                 node = BeamSearchNode(searches[i], emb, lstm_out, final_hidden, final_cell,
                                       mask, torch.cat((go_slice[i], next_word)), log_p - args.gamma*(j+1), 1)
                 # __QUESTION 3: Why do we add the node with a negative score?
-                searches[i].add(-node.eval(args.alpha), node)
+                searches[i].add(-node.eval(args.alpha,args.lamda), node)
 
         # import pdb;pdb.set_trace()
         # Start generating further tokens until max sentence length reached
@@ -186,7 +179,7 @@ def main(args):
                             node.final_cell, node.mask, torch.cat((prev_words[i][0].view([1]),
                             next_word)), node.logp, node.length
                         )
-                        search.add_final(-node.eval(args.alpha), node)
+                        search.add_final(-node.eval(args.alpha,args.lamda), node)
 
                     # Add the node to current nodes for next iteration
                     else:
@@ -195,7 +188,7 @@ def main(args):
                             node.final_cell, node.mask, torch.cat((prev_words[i][0].view([1]),
                             next_word)), node.logp + log_p - args.gamma*(j+1), node.length + 1
                         )
-                        search.add(-node.eval(args.alpha), node)
+                        search.add(-node.eval(args.alpha,args.lamda), node)
 
             # #import pdb;pdb.set_trace()
             # __QUESTION 5: What happens internally when we prune our beams?
