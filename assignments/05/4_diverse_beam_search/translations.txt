@@ -3,7 +3,7 @@ let &apos;s go to be here .
 I &apos;m going to be here to be here .
 I &apos;m afraid that you don &apos;t have to go to the place .
 I &apos;m glad you won &apos;t be out of the place .
-.
+I &apos;m sorry that you don &apos;t have to go to the place .
 do I close the door ?
 do I take the door ?
 I close the door ?
@@ -32,8 +32,8 @@ Tom and let Tom and
 Tom and let Tom and
 Tom and give Tom and
 ?
-do he have a movie &apos;s movie ?
 does it have a movie of this movie ?
+do he have a movie &apos;s movie ?
 .
 he is going to know what I &apos;d be there .
 he is going to know what I &apos;d be there .
@@ -54,7 +54,7 @@ thank you , that will be everything .
 thank you , it &apos;ll be everything .
 he decided to buy his mind to this children .
 he decided to buy his mind to it .
-he decided to buy his mind to that .
+he decided to do his mind to this children .
 the company has been going to the United
 the company has been going to the United
 the company has been going to the United
@@ -166,8 +166,8 @@ he will have a look at this computer !
 Tom doesn &apos;t know how to make it .
 Tom doesn &apos;t know how to finish it .
 Tom doesn &apos;t know how to say it .
-he came alone alone .
 he will be alone alone .
+he came alone alone .
 he won alone alone .
 let &apos;s go to go on the Earth , and let .
 let &apos;s go to go on the Earth , and let .
@@ -186,7 +186,7 @@ the girls did their have a trip to have a trip to make this summer .
 the girls did their have a trip to have a trip to get this summer .
 it &apos;s not a child child .
 that &apos;s not a child child .
-this is only a child .
+it is only a child child .
 she can &apos;t see me time to see her another time .
 she comes to see me time to see me another time .
 she comes to see me time to see her another time .
@@ -195,7 +195,7 @@ don &apos;t worry about this matter .
 don &apos;t worry about this matter .
 I succeeded to tell the book .
 I succeeded to tell the book .
-I succeeded about the book .
+I went to the book to the book .
 a cat a cat a cat a cat .
 a cat a cat a cat .
 a cat a cat a cat .
@@ -239,8 +239,8 @@ come with me in the station with me .
 come with me on the station with me .
 come with me at the station with me .
 I &apos;ll go to the station to the station tomorrow .
-I &apos;ll get you to the station tomorrow .
 I &apos;ll let you go to the station tomorrow .
+I &apos;ll get you to the station tomorrow .
 he made a few days later .
 he turned a few days later .
 he turned a few days later .
@@ -298,8 +298,8 @@ he doesn &apos;t like to wait in the way to do something to do something .
 it &apos;s kind of that .
 it &apos;s dangerous to work .
 it &apos;s dangerous to happen .
-she told a room with
 she must have a room with his sister with her sister .
+she told a room with
 she should have a room with his sister with her sister .
 is there your friends ?
 do he have your friends ?
@@ -308,11 +308,11 @@ these question are tired .
 these hair are tired .
 these legs are tired .
 how can you be tired with the world when the world !
-how can you be tired with the world .
 how can you be late with the world when the world !
+how can you be tired with the world .
 &quot; look , one ! &quot;
-&quot; look , one !
 &quot; look , a ! &quot;
+&quot; look , one !
 you can &apos;t buy that life without buy this medicine .
 you can &apos;t buy that new way to buy this medicine .
 you can &apos;t buy that life without buy this matter .
@@ -366,10 +366,10 @@ I &apos;d like to help them if I &apos;d like to help him .
 I &apos;d like to help them if I &apos;d want to help them .
 do you know where are the others ?
 do you know where that are the others ?
-do you know where do you think
+do you know where there are the others ?
 Tom left that he didn &apos;t see him he had no seen .
 Tom left that he had not seen him he had no seen .
-Tom said that he didn &apos;t see him he had no seen .
+Tom left that he didn &apos;t see him he didn &apos;t see him .
 this car has an never has a person .
 this car has an didn &apos;t have to happen .
 this car has an didn &apos;t have to happen .
@@ -396,7 +396,7 @@ I took a lot of mine .
 I took a lot of mine .
 what are you talking to ?
 what are you talking about ?
-what are you talking about
+what are you going to write ?
 I still have any other things to do things .
 I still have no things to do things to do things .
 I still have done more things to do things .
@@ -422,16 +422,16 @@ there are a table .
 there &apos;s a table .
 there is a table .
 she got for a man for a man .
-she came for a man for a man .
 she left for her for a man for a man .
+she came for a man for a man .
 he went to the work , he went to bed , he went to bed .
 he made the work , he went to bed , he went to bed .
 see the work , he went to bed , he went to bed .
 I saw you at the TV of time .
 I saw you at the TV of times .
-I saw you once .
-are you sure
+I saw you on the TV of time .
 are you sure ?
+are you sure
 are you there ?
 he was mine .
 he was upstairs .
@@ -493,15 +493,15 @@ thank you of him as much as I
 I &apos;d like you to meet my parents .
 I &apos;d like you to go to my parents .
 I &apos;d like you to get my parents to meet my parents .
-my father doesn &apos;t eat as much as it &apos;s doing
 my father doesn &apos;t eat as much as that &apos;s time .
+my father doesn &apos;t eat as much as it &apos;s doing
 my father didn &apos;t eat as as as as much .
 .
 I &apos;m going to go to the bad of my own mother .
 I &apos;m going to go to the bad of my own mother .
 I don &apos;t know where I don &apos;t know where to go , what would do .
-I don &apos;t know where I know where to go , what would do .
 I don &apos;t know where I don &apos;t know where to go , what to do .
+I don &apos;t know where I know where to go , what would do .
 you know all the world .
 you know everyone to everyone the world .
 you know everyone to everybody the world .
@@ -516,7 +516,7 @@ I left the right to Tom .
 I heard the right to Tom .
 you &apos;re going to see you to talk about it .
 you &apos;re going to see you to talk about it alone .
-you &apos;re going to meet you to talk about it .
+you &apos;re going to get you to talk about it alone .
 ?
 is that yours ?
 do you know what it would do
@@ -527,8 +527,8 @@ Tom married the hair every day .
 Tom gets married all every day .
 Tom is married his hair every day .
 the friends of Tom used to the end of the money .
-the friends of Tom used to the cost of the money .
 the friends of Tom used to the cost of the money of money .
+the friends of Tom used to the use of the money of money .
 we never never the truth on
 we never never know the truth on his death
 we never never know the truth on his death .
@@ -537,7 +537,7 @@ all you have to do that is wait .
 all you must do it is wait .
 what is it , this time ?
 what time does this time on this time ?
-what do it , this time ?
+what time does this time on this time
 I took him to took him the
 I took him to took him the
 I took him to meet him the
@@ -699,7 +699,7 @@ I really like to get married .
 I really like to get married now .
 I can &apos;t help me of there .
 I can &apos;t help me out of there .
-I can &apos;t help me there .
+I can &apos;t help me up there .
 my mother works when she &apos;s tired and she was in the house .
 my mother works when she &apos;s tired and she was in the house .
 my mother works when she got home and she was in the house .
@@ -740,8 +740,8 @@ what is it , so good ?
 what &apos;s it , so good ?
 what is this , so good ?
 I like you to help me some time to see me .
-I like you to see time to see me .
 I like you to see time to see me some time to see me .
+I like you to see time to see me .
 .
 .
 I got up to the part of the other of the United
@@ -768,7 +768,7 @@ how many people are there in your class ?
 how many people are there in your class ?
 can I ask ask that ?
 can I ask that ?
-can I ask her who can ask ?
+can I ask her who can ask me ?
 if you don &apos;t know if you don &apos;t have to get up .
 if you don &apos;t know if you don &apos;t have to get up .
 if you don &apos;t know if you don &apos;t have to get it up .
@@ -793,8 +793,8 @@ please come or you or the train .
 we were surprised .
 we were caught .
 we were out of us .
-Tom .
 Tom was a in love with me .
+Tom .
 Tom was a friend of Japanese .
 she took the floor of the kitchen with a cold .
 she took the floor of the kitchen with a cold .
@@ -844,17 +844,17 @@ does you don &apos;t know his name ?
 there is nothing to do anything about Tom .
 it won &apos;t do anything about Tom about Tom .
 it won &apos;t do anything about Tom .
-.
 I looked all , but I &apos;ve seen this , but I haven &apos;t seen it before .
 I found this , but I &apos;ve seen this , but I haven &apos;t seen it before .
+I looked surprised , but I &apos;ve seen this , but I haven &apos;t seen it before .
 the France is sleeping in France .
 the France is living in France for France .
 the France is living in France in France .
 I love this ticket .
 I love this room .
 I love this box .
-they want to see you death
 they want to see you to see
+they want to see you death
 they want to see you dead
 I like a lot of mine .
 I like a lot of mine now .
@@ -898,9 +898,9 @@ do you have any questions of questions ?
 I &apos;ll get there as much as I can &apos;t .
 I &apos;ll get there as as as as as as I can .
 I &apos;ll get there as much as I can .
+she &apos;s wash the car .
+she &apos;s wash the car .
 she &apos;s sleeping .
-she &apos;s wash the car .
-she &apos;s wash the car .
 please get out of this .
 please get this one of the words .
 please get this one of the words .
@@ -914,7 +914,7 @@ please please .
 please please .
 please .
 do you have any ticket ?
-?
+do you have any chance ?
 ?
 there
 a job has four heard off a four !
@@ -976,9 +976,9 @@ I didn &apos;t know why I had been tired to do that .
 I &apos;m going to go by there .
 I &apos;m going to go out by there .
 I &apos;m going to go out for there .
+I don &apos;t care of that .
+I don &apos;t care of that .
 .
-I don &apos;t care of that .
-I don &apos;t care of that .
 you should choose .
 you should choose a job with your friends and your opinion .
 you should choose a job with your friends and your opinion .
@@ -1019,8 +1019,8 @@ sorry you for you .
 .
 sorry you to tell you .
 mother is he &apos;s
-mother is when
 mother is him to do a cake .
+mother is him to make a cake .
 the music is the music of the United
 the music is the music of the teacher .
 it &apos;s the music of the music of young .
@@ -1084,14 +1084,14 @@ I read an letter .
 it &apos;s this ?
 it &apos;s this ?
 it will be a hard of life of life at life .
-.
 you &apos;ll take this one who is it .
+.
 you &apos;ll get this one who is it .
 she left the use of the floor .
 she left the use of the floor .
 she left the use of the use .
-I don &apos;t want to lose .
 I don &apos;t want to lose don &apos;t want to lose Mary .
+I don &apos;t want to lose .
 I don &apos;t want to lose not to lose Mary .
 I can &apos;t wait in the meeting .
 I can &apos;t wait in the meeting .
@@ -1128,7 +1128,7 @@ she seems laughing all alone .
 she seems to find all alone .
 everybody is hate .
 everyone is hate .
-everybody &apos;s hate .
+everyone &apos;s hate the world .
 we &apos;ll make there .
 we &apos;ll have a job .
 we &apos;ll have a doctor .
@@ -1158,7 +1158,7 @@ you can &apos;t get out of it .
 you can &apos;t go to your mind .
 you &apos;re more than Mary than Mary are .
 you &apos;re more than Mary than Mary .
-you &apos;re taller than Mary .
+you &apos;re taller than Mary is more than Mary .
 I want you to get lost .
 I want you to get home .
 I want you to get hurt .
@@ -1238,7 +1238,7 @@ a child was killed .
 a job was killed .
 a dog was killed .
 I have a few good years beautiful .
-I have a few good years old .
+I have a few good beautiful news to live .
 I have a few good beautiful news to live .
 I can make you a little money , if you need .
 I can help you a little money , if you need .
@@ -1350,7 +1350,7 @@ let &apos;s often be done with the eyes of the eyes of the eyes of the eyes of t
 let &apos;s often be done with the eyes of the eyes of the eyes of the eyes of the eyes of the eyes of the eyes of the eyes of the company .
 what happened to the dog ?
 what happened the dog ?
-what happened at the dog ?
+what does he arrived at the dog ?
 is this one is free ?
 is this one is free ?
 ?
@@ -1419,7 +1419,7 @@ we will go to the movies .
 we go to the movies .
 do you go there ?
 do you go to stay ?
-?
+do you get there ?
 we &apos;ll find the truth in the world .
 we &apos;ll get the truth in the world .
 we &apos;ll tell the truth in the world .
@@ -1441,9 +1441,9 @@ do you have any best ?
 I don &apos;t remember that .
 I don &apos;t remember that anymore .
 I don &apos;t feel like that .
-this dress is made off , but I don &apos;t think , but I don &apos;t think it would be it .
-this dress is made off , but I don &apos;t think , but I don &apos;t think it would be it .
 this dress is made off , but I don &apos;t think , but I don &apos;t think it &apos;s going to him .
+this dress is made off , but I don &apos;t think , but I don &apos;t think it &apos;s going to him .
+this dress is made off , but I don &apos;t think , but I don &apos;t think it would be it .
 you &apos;re upset .
 you &apos;re hit .
 you &apos;re right .
