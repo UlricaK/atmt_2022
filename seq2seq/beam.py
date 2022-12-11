@@ -92,9 +92,13 @@ class BeamSearchNode(object):
 
         params:
             :alpha float (default=0.0): hyperparameter for
-            length normalization described in in
+            length normalization described in
             https://arxiv.org/pdf/1609.08144.pdf (equation
             14 as lp), default setting of 0.0 has no effect
+
+            :lamda float (default=0.0): hyperparameter for
+            square regularizer decribed in
+            https://aclanthology.org/2020.emnlp-main.170.pdf
 
         """
         normalizer = (5 + self.length) ** alpha / (5 + 1) ** alpha
